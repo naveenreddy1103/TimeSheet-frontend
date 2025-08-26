@@ -71,8 +71,8 @@ const editClick=(e)=>{
       <div className="container mt-4">
         <div className="d-flex justify-content-between m-2">
           <div className="d-flex" >
-            <div className="h1 text-primary me-4">{Cookies.get('userName')}</div>
-            <div className="mt-3 fw-bold">=>[Total Hours Worked:-{hourCount} ]</div>
+            <div className="h1 text-primary me-4">🧑‍💻 {Cookies.get('userName')}</div>
+            <div className="mt-3 fw-bold">➡️ [Total Hours Worked:-{hourCount} ]</div>
           </div>
           <button onClick={btnClick} className="btn btn-warning fw-bold text-primary btn-sm p-3">Add Time Sheet</button>
         </div>

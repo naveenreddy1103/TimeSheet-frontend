@@ -8,7 +8,7 @@ import axios from "axios";
 const api=import.meta.env.VITE_API_BASE_URL
 
 
-export default function Admin() {
+export default function AdminDashboard() {
 
         const [timeSheetData,setTimeSheetData]=useState([{_id:"",date:"",project:"",hoursWorked:0,notes:""}])
         const navigate=useNavigate()

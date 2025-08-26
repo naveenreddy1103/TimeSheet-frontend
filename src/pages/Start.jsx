@@ -6,7 +6,7 @@ import './form.css'
 
 const api=import.meta.env.VITE_API_BASE_URL
 
-export default function AdminDashboard() {
+export default function EntryPage() {
   
   
   return (
