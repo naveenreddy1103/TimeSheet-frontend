@@ -9,9 +9,7 @@ const api=import.meta.env.VITE_API_BASE_URL
 
 export default function EditTimeSheet() {
     let id=Cookies.get("editTimeSheetId")
-    // let project=Cookies.get("editTimeSheetProject")
-    // let hours=Cookies.get("editTimeSheetHours")
-    // let notes=Cookies.get("editTimeSheetNotes")
+   
     const navigate=useNavigate();
     const [formData,setFormData]=useState({project:'',hoursWorked:0,notes:''})
   const formChange=(e)=>{

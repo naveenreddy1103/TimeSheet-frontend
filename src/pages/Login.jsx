@@ -18,9 +18,8 @@ const Login = () => {
   const formsubmit = async (e) => {
   e.preventDefault();
   try {
-     await axios.post(`${api}/user/login`, data, {
-      withCredentials: true, // if using cookies
-    }).then((response)=>{
+     await axios.post(`${api}/user/login`, data
+      ).then((response)=>{
         Cookies.set('token',response.data.token)
         Cookies.set('userName',response.data.userName)
         Cookies.set('userId',response.data.id)

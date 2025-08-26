@@ -18,10 +18,8 @@ const AdminLogin = () => {
   const formsubmit = async (e) => {
   e.preventDefault();
   try {
-     await axios.post(`${api}/admin/login`, data, {
-      withCredentials: true, // if using cookies
-    }).then((response)=>{
-        
+     await axios.post(`${api}/admin/login`, data)
+     .then((response)=>{ 
         Cookies.set('AdminName',response.data.userName)
         Cookies.set('adminToken',response.data.adminToken)
         Cookies.set('AdminId',response.data.id)
