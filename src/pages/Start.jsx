@@ -7,7 +7,7 @@ import './form.css'
 const api=import.meta.env.VITE_API_BASE_URL
 
 export default function AdminDashboard() {
-  useEffect(()=>{console.log(api)},[])
+  useEffect(()=>{console.log(api,"checking api")},[])
   
   return (
     <div className="start">
