@@ -44,13 +44,13 @@ It provides interfaces for users and admins to manage timesheets.
 
 
 3. Setup & Run
-# Navigate to frontend folder
+## Navigate to frontend folder
 cd frontend
 
-# Install dependencies
+## Install dependencies
 npm install
 
-# Start development server
+## Start development server
 npm run dev
 
 4. Environment Variables
