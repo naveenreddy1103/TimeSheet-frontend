@@ -12,19 +12,19 @@
 } */
 
 .start{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('auth.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/public/auth.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 #admin{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('admin.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/public/admin.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 #user{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('user.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/public/user.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
