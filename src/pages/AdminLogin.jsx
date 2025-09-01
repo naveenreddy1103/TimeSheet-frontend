@@ -3,9 +3,10 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import './form.css'
 import Cookies from "js-cookie";
+import { API } from "../utils/constants";
 
 
-const api = import.meta.env.VITE_API_BASE_URL;
+// const api = import.meta.env.VITE_API_BASE_URL;
 
 const AdminLogin = () => {
   const [data, setData] = useState({ email: '', password: '' });
@@ -18,7 +19,7 @@ const AdminLogin = () => {
   const formsubmit = async (e) => {
   e.preventDefault();
   try {
-     await axios.post(`${api}/admin/login`, data)
+     await axios.post(API+`/admin/login`, data)
      .then((response)=>{ 
         Cookies.set('AdminName',response.data.userName)
         Cookies.set('adminToken',response.data.adminToken)

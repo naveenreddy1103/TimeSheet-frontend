@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import './form.css'
 
-const api=import.meta.env.VITE_API_BASE_URL
+
 
 export default function EntryPage() {
   

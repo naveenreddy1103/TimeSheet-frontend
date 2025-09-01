@@ -3,8 +3,9 @@ import axios from "axios";
 import './form.css'
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { API } from "../utils/constants";
 
-const api=import.meta.env.VITE_API_BASE_URL
+// const api=import.meta.env.VITE_API_BASE_URL
 
 
 export default function EditTimeSheet() {
@@ -18,7 +19,7 @@ export default function EditTimeSheet() {
 const submit=async(e)=>{
    try{
     e.preventDefault()
-    await axios.patch(`${api}/timesheet/edit/${id}`,formData,{
+    await axios.patch(API+`/timesheet/edit/${id}`,formData,{
                   headers:{'token':Cookies.get('token')}
                   })
     .then(()=>{

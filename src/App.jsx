@@ -4,8 +4,9 @@ import Navbar from "./components/Navbar";
 import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API } from "./utils/constants";
 
-const api=import.meta.env.VITE_API_BASE_URL
+// const api=import.meta.env.VITE_API_BASE_URL
 
 
 export default function App() {
@@ -23,7 +24,7 @@ const countHours = (data) => {
 
 const dataLoad = () => {
   if (Cookies.get('token')) {
-    axios.get(`${api}/user/all/timesheet`, {
+    axios.get(API+`/user/all/timesheet`, {
       headers: { token: Cookies.get('token') }
     })
     .then((response) => {
@@ -46,7 +47,7 @@ useEffect(() => {
  
 const deleteClick=async(id)=>{
   console.log(id)
-  await axios.delete(`${api}/timesheet/delete/${id}`,{
+  await axios.delete(API+`/timesheet/delete/${id}`,{
               headers:{'token':Cookies.get('token')}
               })
   .then(()=>{

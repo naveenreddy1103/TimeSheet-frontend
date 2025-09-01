@@ -2,8 +2,9 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 import "./navbar.css"
+import { API } from "../utils/constants";
 
-const api = import.meta.env.VITE_API_BASE_URL
+// const api = import.meta.env.VITE_API_BASE_URL
 
 
 export default function Navbar() {
@@ -12,7 +13,7 @@ export default function Navbar() {
 
   const logout = async () => {
     try {
-      await axios.get(`${api}/user/logout`)
+      await axios.get(API+`/user/logout`)
       .then(()=>{
         Cookies.remove('token')
         nav('/login')

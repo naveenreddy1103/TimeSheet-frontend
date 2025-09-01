@@ -3,8 +3,9 @@ import axios from "axios";
 import { useRef, useState } from "react"
 import { useNavigate, Link } from "react-router-dom";
 import './form.css'
+import { API } from "../utils/constants";
 
-const api =  import.meta.env.VITE_API_BASE_URL
+// const api =  import.meta.env.VITE_API_BASE_URL
  const AdminRegister=()=>{
     
     const [data,setData]=useState({userName:'',email:'',password:''});
@@ -16,7 +17,7 @@ const api =  import.meta.env.VITE_API_BASE_URL
     const formsubmit=async(e)=>{
         try{
             e.preventDefault();
-            await axios.post(`${api}/admin/signup`, data)
+            await axios.post(API+`/admin/signup`, data)
             .then(()=>{
                 alert(`${data.userName} is added successfully`);
             setData({ userName: "", email: "", password: "" });

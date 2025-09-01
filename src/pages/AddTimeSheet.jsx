@@ -3,9 +3,10 @@ import axios from "axios";
 import './form.css'
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { API } from "../utils/constants";
 
 
-const api=import.meta.env.VITE_API_BASE_URL
+// const api=import.meta.env.VITE_API_BASE_URL
 
 export default function AddTimeSheet() {
     const userId=Cookies.get('userId')
@@ -20,7 +21,7 @@ export default function AddTimeSheet() {
 const submit=async(e)=>{
 try{
     e.preventDefault();
-    await axios.post(`${api}/timesheet/create`,formData,{
+    await axios.post(API+`/timesheet/create`,formData,{
               headers:{'token':Cookies.get('token')}
               })
     .then(()=>{
